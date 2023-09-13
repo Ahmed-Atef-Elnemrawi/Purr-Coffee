@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "furniture-E-Commerce": {
+    "Purr-Coffee": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/furniture-e-commerce",
+            "outputPath": "dist/Purr-Coffee",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -43,6 +43,12 @@
           },
           "configurations": {
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",
@@ -72,10 +78,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "furniture-E-Commerce:build:production"
+              "browserTarget": "Purr-Coffee:build:production"
             },
             "development": {
-              "browserTarget": "furniture-E-Commerce:build:development"
+              "browserTarget": "Purr-Coffee:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +89,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "furniture-E-Commerce:build"
+            "browserTarget": "Purr-Coffee:build"
           }
         },
         "test": {
