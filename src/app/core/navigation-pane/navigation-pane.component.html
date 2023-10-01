@@ -1,206 +1,224 @@
 <!-- navigation -->
-<div class="w-full h-full lg:mx-0  flex flex-col place-content-start lg:place-content-start lg:space-y-10">
-  <div class="w-full flex flex-col lg:w-max lg:text-base lg:font-medium mt-10">
+<div
+  class="w-full h-full flex flex-col place-content-start lg:place-content-start max-md:flex-row max-md:place-content-center max-md:z-50"
+>
+  <div
+    class="w-fit h-fit flex flex-col space-x-3 md:space-x-0 md:space-y-4 lg:space-y-3 lg:w-max lg:text-base lg:font-semibold my-5 max-md:flex-row max-md:h-fit max-md:my-2 max-md:w-fit"
+  >
     <!-- home btn -->
-      <button
-        title="home"
-        type="button"
-        routerLink="/"
-        routerLinkActive="active"
-        class=" py-1.5 flex space-x-1.5 max-w-fit lg:max-w-full px-4 lg:px-6 "
+    <button
+      title="home"
+      type="button"
+      routerLink="/home"
+      routerLinkActive="active"
+      class="my-0.5 py-1.5 flex space-x-1.5 max-w-fit lg:max-w-full lg:w-full px-4 lg:px-6 max-md:h-fit max-md:w-fit max-md:px-1 max-md:py-1"
+    >
+      <svg
+        class="inline-block w-5 h-5 place-self-center opacity-75 md:w-6 md:h-6 lg:w-5 lg:h-5"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#000000"
+        stroke-width="2"
+        opacity="9.5"
       >
-        <svg
-          class="inline-block w-5 h-5 place-self-center opacity-75 md:w-6 md:h-6 lg:w-5 lg:h-5"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#000000"
-          stroke-width="2"
-          opacity="9.5"
-        >
-          <path
-            d="M2 12.2039C2 9.91549 2 8.77128 2.5192 7.82274C3.0384 6.87421 3.98695 6.28551 5.88403 5.10813L7.88403 3.86687C9.88939 2.62229 10.8921 2 12 2C13.1079 2 14.1106 2.62229 16.116 3.86687L18.116 5.10812C20.0131 6.28551 20.9616 6.87421 21.4808 7.82274C22 8.77128 22 9.91549 22 12.2039V13.725C22 17.6258 22 19.5763 20.8284 20.7881C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.7881C2 19.5763 2 17.6258 2 13.725V12.2039Z"
-          />
-          <path
-            d="M9 16C9.85038 16.6303 10.8846 17 12 17C13.1154 17 14.1496 16.6303 15 16"
-            stroke-linecap="round"
-          />
-        </svg>
-        <span class="place-self-center inline-block tracking-wider max-lg:hidden"
-          >Home page</span
-        >
-      </button>
-      <!-- menu btn -->
-      <button
-        title="menu"
-        type="button"
-        class="my-0.5 py-1.5 flex space-x-1.5 max-w-fit lg:max-w-full lg:w-full px-4 lg:px-6  "
-      >
-        <svg
-          class="inline-block w-5 h-5 place-self-center opacity-75 md:w-6 md:h-6 lg:w-5 lg:h-5"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#000000"
-          stroke-width="2"
+        <path
+          d="M2 12.2039C2 9.91549 2 8.77128 2.5192 7.82274C3.0384 6.87421 3.98695 6.28551 5.88403 5.10813L7.88403 3.86687C9.88939 2.62229 10.8921 2 12 2C13.1079 2 14.1106 2.62229 16.116 3.86687L18.116 5.10812C20.0131 6.28551 20.9616 6.87421 21.4808 7.82274C22 8.77128 22 9.91549 22 12.2039V13.725C22 17.6258 22 19.5763 20.8284 20.7881C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.7881C2 19.5763 2 17.6258 2 13.725V12.2039Z"
+        />
+        <path
+          d="M9 16C9.85038 16.6303 10.8846 17 12 17C13.1154 17 14.1496 16.6303 15 16"
           stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path
-            d="M6.75 3C3.88235 3 3 3.88235 3 6.75C3 9.61765 3.88235 10.5 6.75 10.5C9.61765 10.5 10.5 9.61765 10.5 6.75C10.5 3.88235 9.61765 3 6.75 3Z"
-          />
-          <path
-            d="M6.75 13.5C3.88235 13.5 3 14.3824 3 17.25C3 20.1176 3.88235 21 6.75 21C9.61765 21 10.5 20.1176 10.5 17.25C10.5 14.3824 9.61765 13.5 6.75 13.5Z"
-          />
-          <path
-            d="M17.25 13.5C14.3824 13.5 13.5 14.3824 13.5 17.25C13.5 20.1176 14.3824 21 17.25 21C20.1176 21 21 20.1176 21 17.25C21 14.3824 20.1176 13.5 17.25 13.5Z"
-          />
-          <path
-            d="M17.25 3C14.3824 3 13.5 3.88235 13.5 6.75C13.5 9.61765 14.3824 10.5 17.25 10.5C20.1176 10.5 21 9.61765 21 6.75C21 3.88235 20.1176 3 17.25 3Z"
-          />
-        </svg>
-        <span class="place-self-center inline-block tracking-wider max-lg:hidden">Menu</span>
-      </button>
-      <!-- my orders btn -->
-      <button
-        title="my orders"
-        type="button"
-        class="my-0.5 py-1.5 flex space-x-1.5 max-w-fit lg:max-w-full lg:w-full px-4 lg:px-6  "
-        (click)="toggleMyOrders()"
+        />
+      </svg>
+      <span class="place-self-center inline-block tracking-wider max-lg:hidden"
+        >Home page</span
       >
-        <svg
-          class="inline-block w-5 h-5 place-self-center opacity-75 md:w-6 md:h-6 lg:w-5 lg:h-5"
-          stroke="#000000"
-          stroke-width="2"
-          stroke-linecap="round"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M21 16.0909V11.0975C21 6.80891 21 4.6646 19.682 3.3323C18.364 2 16.2426 2 12 2C7.75736 2 5.63604 2 4.31802 3.3323C3 4.6646 3 6.80891 3 11.0975V16.0909C3 19.1875 3 20.7358 3.73411 21.4123C4.08421 21.735 4.52615 21.9377 4.99692 21.9915C5.98402 22.1045 7.13673 21.0849 9.44216 19.0458C10.4612 18.1445 10.9708 17.6938 11.5603 17.5751C11.8506 17.5166 12.1494 17.5166 12.4397 17.5751C13.0292 17.6938 13.5388 18.1445 14.5578 19.0458C16.8633 21.0849 18.016 22.1045 19.0031 21.9915C19.4739 21.9377 19.9158 21.735 20.2659 21.4123C21 20.7358 21 19.1875 21 16.0909Z"
-          ></path>
-          <path d="M15 6H9"></path>
-        </svg>
-        <span class="place-self-center inline-block tracking-wider max-lg:hidden"
-          >My orders</span
-        >
-      </button>
-      <!-- history btn -->
-      <button
-        title="history"
-        type="button"
-        class="my-0.5 py-1.5 flex space-x-1.5 max-w-fit lg:max-w-full lg:w-full px-4 lg:px-6  "
+    </button>
+    <!-- menu btn -->
+    <button
+      title="menu"
+      type="button"
+      [routerLink]="['/menu']"
+      routerLinkActive="active"
+      class="my-0.5 py-1.5 flex space-x-1.5 max-w-fit lg:max-w-full lg:w-full px-4 lg:px-6 max-md:h-fit max-md:w-fit max-md:px-1 max-md:py-1"
+    >
+      <svg
+        class="inline-block w-5 h-5 place-self-center opacity-75 md:w-6 md:h-6 lg:w-5 lg:h-5"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#000000"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
       >
-        <svg
-          class="inline-block w-5 h-5 place-self-center opacity-75 md:w-6 md:h-6 lg:w-5 lg:h-5"
-          id="history"
-          viewBox="0 0 24 24"
-          stroke="#000000"
-          fill="none"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14"
-          ></path>
-          <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z"></path>
-          <path d="M7 13H13"></path>
-          <path d="M7 17H11"></path>
-        </svg>
-        <span class="place-self-center inline-block tracking-wider max-lg:hidden">History</span>
-      </button>
+        <path
+          d="M6.75 3C3.88235 3 3 3.88235 3 6.75C3 9.61765 3.88235 10.5 6.75 10.5C9.61765 10.5 10.5 9.61765 10.5 6.75C10.5 3.88235 9.61765 3 6.75 3Z"
+        />
+        <path
+          d="M6.75 13.5C3.88235 13.5 3 14.3824 3 17.25C3 20.1176 3.88235 21 6.75 21C9.61765 21 10.5 20.1176 10.5 17.25C10.5 14.3824 9.61765 13.5 6.75 13.5Z"
+        />
+        <path
+          d="M17.25 13.5C14.3824 13.5 13.5 14.3824 13.5 17.25C13.5 20.1176 14.3824 21 17.25 21C20.1176 21 21 20.1176 21 17.25C21 14.3824 20.1176 13.5 17.25 13.5Z"
+        />
+        <path
+          d="M17.25 3C14.3824 3 13.5 3.88235 13.5 6.75C13.5 9.61765 14.3824 10.5 17.25 10.5C20.1176 10.5 21 9.61765 21 6.75C21 3.88235 20.1176 3 17.25 3Z"
+        />
+      </svg>
+      <span class="place-self-center inline-block tracking-wider max-lg:hidden"
+        >Menu</span
+      >
+    </button>
+    <!-- my orders btn -->
+    <button
+      title="my orders"
+      type="button"
+      class="my-0.5 py-1.5 flex space-x-1.5 max-w-fit lg:max-w-full lg:w-full px-4 lg:px-6 max-md:h-fit max-md:w-fit max-md:px-1 max-md:py-1 relative"
+      [routerLink]="['/order']"
+      routerLinkActive="active"
+    >
+      <svg
+        class="inline-block w-5 h-5 place-self-center opacity-75 md:w-6 md:h-6 lg:w-5 lg:h-5"
+        stroke="#000000"
+        stroke-width="2"
+        stroke-linecap="round"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M21 16.0909V11.0975C21 6.80891 21 4.6646 19.682 3.3323C18.364 2 16.2426 2 12 2C7.75736 2 5.63604 2 4.31802 3.3323C3 4.6646 3 6.80891 3 11.0975V16.0909C3 19.1875 3 20.7358 3.73411 21.4123C4.08421 21.735 4.52615 21.9377 4.99692 21.9915C5.98402 22.1045 7.13673 21.0849 9.44216 19.0458C10.4612 18.1445 10.9708 17.6938 11.5603 17.5751C11.8506 17.5166 12.1494 17.5166 12.4397 17.5751C13.0292 17.6938 13.5388 18.1445 14.5578 19.0458C16.8633 21.0849 18.016 22.1045 19.0031 21.9915C19.4739 21.9377 19.9158 21.735 20.2659 21.4123C21 20.7358 21 19.1875 21 16.0909Z"
+        ></path>
+        <path d="M15 6H9"></path>
+      </svg>
+      <span class="place-self-center inline-block tracking-wider max-lg:hidden"
+        >My orders</span
+      >
+      <!-- order btn notification -->
+      <span class="w-3 h-3 lg:p-2 flex place-items-center place-content-center text-xs font-bold rounded-full bg-red-400 text-white absolute top-0.5 right-0.5
+      md:right-3.5 md:top-1 lg:right:10 lg:top-3"
+      *ngIf="!!(orderItemsCount$ | async)">{{
+        orderItemsCount$ | async
+      }}</span>
+    </button>
+    <!-- history btn -->
+    <button
+      title="history"
+      type="button"
+      class="my-0.5 py-1.5 flex space-x-1.5 max-w-fit lg:max-w-full lg:w-full px-4 lg:px-6 max-md:h-fit max-md:w-fit max-md:px-1 max-md:py-1"
+    >
+      <svg
+        class="inline-block w-5 h-5 place-self-center opacity-75 md:w-6 md:h-6 lg:w-5 lg:h-5"
+        id="history"
+        viewBox="0 0 24 24"
+        stroke="#000000"
+        fill="none"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14"
+        ></path>
+        <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z"></path>
+        <path d="M7 13H13"></path>
+        <path d="M7 17H11"></path>
+      </svg>
+      <span class="place-self-center inline-block tracking-wider max-lg:hidden"
+        >History</span
+      >
+    </button>
 
     <!-- vertical line -->
-    <span class="w-full h-px border border-gray-100 my-3.5"></span>
+    <span
+      class="w-full h-px border border-gray-100 my-3.5 max-md:hidden"
+    ></span>
 
-      <!-- partners btn -->
-      <button
-        title="partners"
-        type="button"
-        class="my-0.5 py-1.5 flex space-x-1.5 max-w-fit lg:max-w-full lg:w-full px-4 lg:px-6  "
+    <!-- partners btn -->
+    <button
+      title="partners"
+      type="button"
+      class="my-0.5 py-1.5 flex space-x-1.5 max-w-fit lg:max-w-full lg:w-full px-4 lg:px-6 max-md:h-fit max-md:w-fit max-md:px-1 max-md:py-1"
+    >
+      <svg
+        class="inline-block w-5 h-5 place-self-center opacity-75 md:w-6 md:h-6 lg:w-5 lg:h-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#000000"
+        stroke-width="2"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <svg
-          class="inline-block w-5 h-5 place-self-center opacity-75 md:w-6 md:h-6 lg:w-5 lg:h-5"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#000000"
-          stroke-width="2"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="12" cy="6" r="4"></circle>
-          <path
-            d="M20 17.5C20 19.9853 20 22 12 22C4 22 4 19.9853 4 17.5C4 15.0147 7.58172 13 12 13C16.4183 13 20 15.0147 20 17.5Z"
-          ></path>
-        </svg>
-        <span class="place-self-center inline-block tracking-wider max-lg:hidden">Partners</span>
-      </button>
-      <!-- settings btn -->
-      <button
-        title="settings"
-        type="button"
-        class="my-0.5 py-1.5 flex space-x-1.5 max-w-fit lg:max-w-full lg:w-full px-4 lg:px-6  "
+        <circle cx="12" cy="6" r="4"></circle>
+        <path
+          d="M20 17.5C20 19.9853 20 22 12 22C4 22 4 19.9853 4 17.5C4 15.0147 7.58172 13 12 13C16.4183 13 20 15.0147 20 17.5Z"
+        ></path>
+      </svg>
+      <span class="place-self-center inline-block tracking-wider max-lg:hidden"
+        >Partners</span
       >
-        <svg
-          class="inline-block w-5 h-5 place-self-center opacity-75 md:w-6 md:h-6 lg:w-5 lg:h-5"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#000000"
-          stroke-width="2"
-          stroke-miterlimit="10"
+    </button>
+    <!-- settings btn -->
+    <button
+      title="settings"
+      type="button"
+      class="my-0.5 py-1.5 flex space-x-1.5 max-w-fit lg:max-w-full lg:w-full px-4 lg:px-6 max-md:h-fit max-md:w-fit max-md:px-1 max-md:py-1"
+    >
+      <svg
+        class="inline-block w-5 h-5 place-self-center opacity-75 md:w-6 md:h-6 lg:w-5 lg:h-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#000000"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
+        ></path>
+        <path
+          d="M2 12.8799V11.1199C2 10.0799 2.85 9.21994 3.9 9.21994C5.71 9.21994 6.45 7.93994 5.54 6.36994C5.02 5.46994 5.33 4.29994 6.24 3.77994L7.97 2.78994C8.76 2.31994 9.78 2.59994 10.25 3.38994L10.36 3.57994C11.26 5.14994 12.74 5.14994 13.65 3.57994L13.76 3.38994C14.23 2.59994 15.25 2.31994 16.04 2.78994L17.77 3.77994C18.68 4.29994 18.99 5.46994 18.47 6.36994C17.56 7.93994 18.3 9.21994 20.11 9.21994C21.15 9.21994 22.01 10.0699 22.01 11.1199V12.8799C22.01 13.9199 21.16 14.7799 20.11 14.7799C18.3 14.7799 17.56 16.0599 18.47 17.6299C18.99 18.5399 18.68 19.6999 17.77 20.2199L16.04 21.2099C15.25 21.6799 14.23 21.3999 13.76 20.6099L13.65 20.4199C12.75 18.8499 11.27 18.8499 10.36 20.4199L10.25 20.6099C9.78 21.3999 8.76 21.6799 7.97 21.2099L6.24 20.2199C5.33 19.6999 5.02 18.5299 5.54 17.6299C6.45 16.0599 5.71 14.7799 3.9 14.7799C2.85 14.7799 2 13.9199 2 12.8799Z"
+        ></path>
+      </svg>
+      <span class="place-self-center inline-block tracking-wider max-lg:hidden"
+        >Settings</span
+      >
+    </button>
+    <!-- donate to shelter btn -->
+    <button
+      title="donate to shelter"
+      type="button"
+      class="my-0.5 py-1.5 flex space-x-1.5 max-w-fit lg:max-w-full lg:w-full px-4 lg:px-6 max-md:h-fit max-md:w-fit max-md:px-1 max-md:py-1"
+    >
+      <svg
+        class="inline-block w-5 h-5 place-self-center opacity-75 md:w-6 md:h-6 lg:w-5 lg:h-5"
+        fill="#ffa16c"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
           stroke-linecap="round"
           stroke-linejoin="round"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        ></g>
+        <g id="SVGRepo_iconCarrier">
           <path
-            d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
+            d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.186 10.74L12 16.926 7.814 12.74a2.745 2.745 0 0 1 0-3.907 2.745 2.745 0 0 1 3.906 0l.28.279.279-.279a2.745 2.745 0 0 1 3.906 0 2.745 2.745 0 0 1 .001 3.907z"
           ></path>
-          <path
-            d="M2 12.8799V11.1199C2 10.0799 2.85 9.21994 3.9 9.21994C5.71 9.21994 6.45 7.93994 5.54 6.36994C5.02 5.46994 5.33 4.29994 6.24 3.77994L7.97 2.78994C8.76 2.31994 9.78 2.59994 10.25 3.38994L10.36 3.57994C11.26 5.14994 12.74 5.14994 13.65 3.57994L13.76 3.38994C14.23 2.59994 15.25 2.31994 16.04 2.78994L17.77 3.77994C18.68 4.29994 18.99 5.46994 18.47 6.36994C17.56 7.93994 18.3 9.21994 20.11 9.21994C21.15 9.21994 22.01 10.0699 22.01 11.1199V12.8799C22.01 13.9199 21.16 14.7799 20.11 14.7799C18.3 14.7799 17.56 16.0599 18.47 17.6299C18.99 18.5399 18.68 19.6999 17.77 20.2199L16.04 21.2099C15.25 21.6799 14.23 21.3999 13.76 20.6099L13.65 20.4199C12.75 18.8499 11.27 18.8499 10.36 20.4199L10.25 20.6099C9.78 21.3999 8.76 21.6799 7.97 21.2099L6.24 20.2199C5.33 19.6999 5.02 18.5299 5.54 17.6299C6.45 16.0599 5.71 14.7799 3.9 14.7799C2.85 14.7799 2 13.9199 2 12.8799Z"
-          ></path>
-        </svg>
-        <span class="place-self-center inline-block tracking-wider max-lg:hidden">Settings</span>
-      </button>
-      <!-- donate to shelter btn -->
-      <button
-        title="donate to shelter"
-        type="button"
-        class="my-0.5 py-1.5 flex space-x-1.5 max-w-fit lg:max-w-full lg:w-full px-4 lg:px-6  "
+        </g>
+      </svg>
+      <span class="place-self-center inline-block tracking-wider max-lg:hidden"
+        >Donate to shelter</span
       >
-        <svg
-          class="inline-block w-5 h-5 place-self-center opacity-75 md:w-6 md:h-6 lg:w-5 lg:h-5"
-          fill="#ffa16c"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-          <g
-            id="SVGRepo_tracerCarrier"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          ></g>
-          <g id="SVGRepo_iconCarrier">
-            <path
-              d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.186 10.74L12 16.926 7.814 12.74a2.745 2.745 0 0 1 0-3.907 2.745 2.745 0 0 1 3.906 0l.28.279.279-.279a2.745 2.745 0 0 1 3.906 0 2.745 2.745 0 0 1 .001 3.907z"
-            ></path>
-          </g>
-        </svg>
-        <span class="place-self-center inline-block tracking-wider max-lg:hidden"
-          >Donate to shelter</span
-        >
-      </button>
-    </div>
-
-  <div
-    class="w-full flex flex-col lg:w-max font-medium lg:text-base"
-  >
-    <!-- logout btn -->
+    </button>
+    <!-- logout -->
     <button
       title="logout"
       type="button"
-      class="my-0.5 py-1.5 flex space-x-1.5 max-w-fit lg:max-w-full lg:w-full px-4 lg:px-6  "
+      class="mt-0.5 py-1.5 flex space-x-1.5 max-w-fit lg:max-w-full lg:w-full px-4 lg:px-6 max-md:h-fit max-md:w-fit max-md:px-1 max-md:py-1"
     >
       <svg
         class="inline-block w-5 h-5 place-self-center opacity-75 md:w-6 md:h-6 lg:w-5 lg:h-5"
@@ -222,7 +240,9 @@
           d="M16.3597 7.63C16.0297 4.05 14.6897 2.75 9.35974 2.75C2.25874 2.75 2.25874 5.06 2.25874 12C2.25874 18.94 2.25874 21.25 9.35974 21.25C14.6897 21.25 16.0297 19.95 16.3597 16.37"
         ></path>
       </svg>
-      <span class="place-self-center inline-block tracking-wider max-lg:hidden">Logout</span>
+      <span class="place-self-center inline-block tracking-wider max-lg:hidden"
+        >Logout</span
+      >
     </button>
   </div>
 </div>
