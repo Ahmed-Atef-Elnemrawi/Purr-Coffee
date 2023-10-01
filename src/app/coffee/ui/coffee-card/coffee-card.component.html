@@ -1,0 +1,118 @@
+<div
+  class="w-full h-fit flex flex-col place-content-around py-6 px-3 sm:px-4 lg:px-5 bg-white rounded-3xl space-y-5 lg:space-y-3"
+>
+  <div class="flex flex-row space-x-2 sm:space-x-4">
+    <img
+      src="{{ coffee.imageSrc }}"
+      class="w-28 h-28 shrink-0 block rounded-lg"
+    />
+    <!-- details -->
+    <div
+      class="space-y-3 sm:space-y-4 lg:space-y-3 flex flex-col place-items-start"
+    >
+      <!-- header -->
+      <div class="flex space-x-2 sm:space-x-4 max-md:text-start">
+        <!-- title -->
+        <p class="text-base/tight font-semibold md:text-xl lg:text-base">
+          {{ coffee.title | lowercase}}
+        </p>
+        <!-- price -->
+        <p
+          class="text-base/tight md:text-xl lg:text-base font-semibold text-btnClr0"
+        >
+          {{ coffee.price | currency }}
+        </p>
+      </div>
+      <!-- content -->
+      <p
+        class="text-base/tight md:text-lg font-medium opacity-50 rounded-t-3xl w-full lg:text-sm/snug lg:font-semibold max-w-prose tracking-tight"
+      >
+        {{ coffee.description }}
+      </p>
+      <!-- footer -->
+      <div
+        class="w-full flex flex-row place-items-start pb-4 lg:place-content-start space-x-2"
+      >
+        <div class="flex space-x-2 sm:space-x-4 lg:space-x-2 w-full">
+          <button
+            #btn
+            type="button"
+            class="text-sm/snug md:text-base/snug lg:text-sm/6 border-2 border-btnClr1 rounded-full px-4 lg:px-1.5 font-medium active"
+            value="small"
+            (click)="setItemSize('small - 200g')"
+            [disabled]="isAddedToCart"
+          >
+            Small
+          </button>
+
+          <button
+            #btn
+            type="button"
+            class="text-sm/snug md:text-base/snug lg:text-sm/6 border-2 border-btnClr1 rounded-full px-4 lg:px-1.5 font-medium"
+            value="large"
+            (click)="setItemSize('large - 300g')"
+            [disabled]="isAddedToCart"
+          >
+            Large
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="w-full h-full max-h-fit flex flex-row place-content-between px-5 space-x-4"
+  >
+    <!-- quantity -->
+    <div class="flex flex-row space-x-2 place-items-center">
+      <button class="w-6 h-6 md:w-6 md:h-6 lg:w-6 lg:h-6" (click)="decrement()" [disabled]="isAddedToCart">
+        <svg
+          stroke="#000"
+          stroke-width="2"
+          stroke-linecap="round"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle opacity="0.3" cx="12" cy="12" r="10"></circle>
+          <path d="M15 12H9"></path>
+        </svg>
+      </button>
+      <p class="text-lg md:text-2xl lg:text-base font-semibold" [ngClass]="{'opacity-40': isAddedToCart}">
+        {{ quantityOfItem() }}
+      </p>
+      <button class="w-6 h-6 md:w-6 md:h-6 lg:w-6 lg:h-6" (click)="increment()" [disabled]="isAddedToCart">
+        <svg
+          stroke="#000"
+          stroke-width="2"
+          stroke-linecap="round"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle opacity="0.3" cx="12" cy="12" r="10"></circle>
+          <path d="M15 12L12 12M12 12L9 12M12 12L12 9M12 12L12 15"></path>
+        </svg>
+      </button>
+    </div>
+
+    <button
+      type="button"
+      class="font-medium text-btnClr0 border-2 border-btnClr0 rounded-3xl px-3 lg:py-1.5 lg:px-3 lg:text-base/snug"
+      *ngIf="!isAddedToCart"
+      [disabled]="quantityOfItem() === 0"
+      (click)="onAddToCart()"
+    >
+      Add to cart
+    </button>
+
+    <button
+      type="button"
+      class="font-medium text-white border-2 border-btnClr0 bg-btnClr0 rounded-3xl px-3 lg:py-1.5 lg:px-3 lg:text-base/snug "
+      *ngIf="isAddedToCart"
+      (click)="onRemoveFromCart()"
+    >
+      Added to cart
+    </button>
+  </div>
+</div>
