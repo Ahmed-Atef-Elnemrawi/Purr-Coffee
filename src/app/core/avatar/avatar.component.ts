@@ -10,12 +10,12 @@ import { CommonModule } from '@angular/common';
       <div class="flex space-x-2">
         <div>
           <img
-            class=" w-10 h-10 lg:w-12 lg:h-12 block bg-gray-50 shadow-sm rounded-full"
+            class=" w-10 h-10 lg:w-10 lg:h-10 block bg-gray-50 shadow-sm rounded-full"
             src="https://source.unsplash.com/ZHvM3XIOHoE/"
             alt=""
           />
         </div>
-        <div class=" text-base md:text-lg lg:text-base/snug max-lg:hidden">
+        <div class=" text-base md:text-lg lg:text-sm/snug max-lg:hidden">
           <div class="font-semibold opacity-95">Albert Flores</div>
           <p class="text-slate-500 font-medium">purrcaf@gmail.com</p>
         </div>
