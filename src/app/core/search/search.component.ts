@@ -6,9 +6,9 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="flex place-content-center max-w-md">
+    <div class="flex place-content-start max-w-md">
       <form
-        class=" h-10 w-full grid grid-flow-col grid-cols-4 rounded-full bg-gray-50 overflow-hidden "
+        class=" h-10 w-full grid grid-flow-col grid-cols-4 rounded-full bg-slate-50 overflow-hidden "
       >
         <input
           type="search"
