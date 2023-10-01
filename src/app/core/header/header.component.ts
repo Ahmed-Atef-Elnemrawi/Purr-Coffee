@@ -8,7 +8,7 @@ import { AvatarComponent } from '../avatar/avatar.component';
   standalone: true,
   imports: [CommonModule, SearchComponent, AvatarComponent],
   template: `
-    <div class="py-3.5 h-fit w-full flex place-content-between space-x-4 md:space-x-10 place-items-center lg:space-x-6">
+    <div class="py-5 h-fit w-full flex place-content-between space-x-4 md:space-x-10 place-items-center lg:py-4 lg:space-x-6">
       <!-- logo -->
       <div
         class=" place-self-start px-4 text-lg font-bold  max-[500px]:hidden md:text-2xl md:h-10"
