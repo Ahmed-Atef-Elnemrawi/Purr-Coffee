@@ -1,0 +1,42 @@
+<div class="flex flex-col w-full h-full lg:px-6 lg:py-4">
+
+      <ng-container *ngIf="history$ | async as history else message;">
+        <table *ngFor="let orderHistory of history" class="w-full h-fit border border-black border-collapse bg-white my-6">
+          <caption>
+            <p class="text-base font-semibold opacity-60 text-center">{{orderHistory.dateTime}}</p>
+            <p class="text-base font-semibold opacity-60 text-center pb-1">{{orderHistory.order.channel}}</p>
+          </caption>
+          <thead>
+            <th class="text-lg font-bold border border-black">item</th>
+            <th class="text-lg font-bold border border-black">quantity</th>
+            <th class="text-lg font-bold border border-black">price</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of orderHistory.order.items">
+              <td class="text-center font-medium border border-black">{{item.name}}</td>
+              <td class="text-center font-medium border border-black">{{item.quantity}}</td>
+              <td class="text-center font-medium border border-black">{{item.totalPrice}}</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <th class="text-lg font-bold border border-black">total</th>
+            <th class="text-lg font-bold border border-black">discount</th>
+            <th class="text-lg font-bold border border-black">total after discount</th>
+            <tr>
+              <td class="text-center font-medium border border-black">{{orderHistory.order.total}}</td>
+              <td class="text-center font-medium border border-black">{{orderHistory.order.discount}}</td>
+              <td class="text-center font-medium border border-black">{{orderHistory.order.totalAfterDiscount}}</td>
+            </tr>
+          </tfoot>
+        </table>
+      </ng-container>
+      <div class="w-full h-fit py-6"></div>
+
+</div>
+
+
+<ng-template #message>
+  <div class="w-full h-96 flex flex-col place-content-center place-items-center">
+    <p class="text-lg font-semibold opacity-60">your History is empty.</p>
+  </div>
+</ng-template>
