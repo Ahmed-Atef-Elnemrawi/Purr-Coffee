@@ -1,9 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { itemsCount } from 'src/app/order/data-access/store/order.feature';
+import { itemsCount } from 'src/app/order/data-access/store';
 
 
 @Component({
