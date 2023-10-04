@@ -1,0 +1,48 @@
+<div
+  class="w-full h-[90vh] md:h-[78vh] lg:h-[70vh] md:py-4 lg:p-0 absolute top-0 bottom-24 right-0 left-0 md:static z-50 lg:grid lg:grid-flow-col lg:grid-cols-2 lg:grid-rows-6 lg:gap-x-8 lg:bg-transparent lg:space-y-0 bg-white px-4 lg:static overflow-y-scroll"
+  *ngIf="order$ | async as order; else message"
+>
+  <div
+    class="h-[48vh] md:h-[40vh] lg:h-[70vh] flex flex-col lg:bg-white lg:w-full lg:space-y-2 lg:py-5 lg:px-7 lg:rounded-3xl lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-7 md:px-8 md:py-4"
+  >
+    <order-header [orderId]="order.orderId" class="p-3"></order-header>
+    <div
+      class="lg:h-[70vh] lg:max-h-[65vh] md:h-[37vh] lg:overflow-scroll overflow-y-scroll grow lg:grow-0"
+    >
+      <order-item-card
+        *ngFor="let item of order.items"
+        [item]="item"
+        (quantityChanged)="onQuantityChanged($event.itemId, $event.quantity)"
+        (itemDeleted)="onItemDeleted($event.itemId)"
+      ></order-item-card>
+    </div>
+  </div>
+
+  <div
+    class="w-full h-[42vh] md:h-[33vh] lg:h-[50vh] lg:py-5 lg:px-7 lg:rounded-3xl flex flex-col place-content-around bg-white lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2 overflow-y-scroll md:px-8 md:py-4"
+  >
+    <order-options
+      class="md:py-3 lg:py-0"
+      (optionChanged)="onOptionChanged($event.option)"
+    ></order-options>
+
+    <order-footer
+      class="h-fit w-full lg:rounded-3xl lg:col-start-2 lg:col-end-3 lg:row-start-3 lg:row-end-7"
+      [total]="order.total"
+      [discount]="order.discount!"
+      [totalAfterDiscount]="order.totalAfterDiscount"
+    ></order-footer>
+  </div>
+</div>
+
+<ng-template #message>
+  <div
+    class="w-full h-96 max-h-96 flex flex-col place-items-center place-content-center"
+  >
+    <p
+      class="text-lg font-semibold tracking-wide flex place-items-center opacity-50"
+    >
+      There is no items yet.
+    </p>
+  </div>
+</ng-template>
