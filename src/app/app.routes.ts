@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
 import { provideState } from '@ngrx/store';
 import { coffeesFeature } from './coffee/data-access/store/coffee.feature';
 import { coffeeResolver } from './coffee/utils/coffee.resolver';
@@ -10,8 +9,6 @@ import { HistoryEffects, historyFeature } from './history/data-access/store';
 import { HistoryResolver } from './history/utils/history.resolver';
 
 export const routes: Routes = [
-  { path: '', pathMatch: 'full', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
   {
     path: 'menu',
     loadComponent: () =>
