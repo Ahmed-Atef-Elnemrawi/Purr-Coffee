@@ -15,7 +15,7 @@ import { OrderUIActions } from 'src/app/order/data-access/store/order-ui.actions
 import { Item } from 'src/app/order/models';
 import {
   isAddedToCart,
-} from 'src/app/order/data-access/store/order.feature';
+} from 'src/app/order/data-access/store';
 
 @Component({
   selector: 'app-coffee-list',
