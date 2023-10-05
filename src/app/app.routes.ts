@@ -10,6 +10,12 @@ import { HistoryResolver } from './history/utils/history.resolver';
 
 export const routes: Routes = [
   {
+    path:'',
+    pathMatch:'full',
+    redirectTo:'menu'
+  },
+  {
+
     path: 'menu',
     loadComponent: () =>
       import('./coffee/feature/coffee-list/coffee-list.component')
