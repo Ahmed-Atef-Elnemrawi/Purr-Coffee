@@ -78,10 +78,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Purr-Coffee:build:production"
+              "buildTarget": "Purr-Coffee:build:production"
             },
             "development": {
-              "browserTarget": "Purr-Coffee:build:development"
+              "buildTarget": "Purr-Coffee:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -89,7 +89,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Purr-Coffee:build"
+            "buildTarget": "Purr-Coffee:build"
           }
         },
         "test": {
