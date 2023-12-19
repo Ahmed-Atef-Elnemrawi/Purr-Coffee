@@ -28,7 +28,7 @@ export const appConfig: ApplicationConfig = {
       autoPause: true,
       trace: false,
       traceLimit: 75,
-    }),
+    connectInZone: true}),
     provideHttpClient(),
     LoggingService,
     importProvidersFrom(InMemoryWebApiModule.forRoot(AppDb, { delay: 1000 })),
